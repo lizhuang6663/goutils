@@ -12,7 +12,7 @@ type ConcurrentUtils struct {
 	pool sync.Pool
 }
 
-// NewConcurrentUtils 创建一个新的 ConcurrentUtils 实例
+// NewConcurrentUtils 创建一个 ConcurrentUtils 实例
 func NewConcurrentUtils() *ConcurrentUtils {
 	return &ConcurrentUtils{
 		pool: sync.Pool{
@@ -24,13 +24,6 @@ func NewConcurrentUtils() *ConcurrentUtils {
 }
 
 // ConcurrentConcat 使用 sync.Pool 并发安全地拼接字符串
-// 参数:
-//
-//	strs ...string: 要拼接的字符串列表
-//
-// 返回值:
-//
-//	string: 拼接后的字符串
 func (cu *ConcurrentUtils) ConcurrentConcat(strs ...string) string {
 	builder := cu.pool.Get().(*strings.Builder)
 	defer cu.pool.Put(builder)
@@ -43,13 +36,6 @@ func (cu *ConcurrentUtils) ConcurrentConcat(strs ...string) string {
 }
 
 // estimateLength 估算拼接字符串的总长度，用于预分配内存
-// 参数:
-//
-//	strs []string: 要拼接的字符串列表
-//
-// 返回值:
-//
-//	int: 估算的总长度
 func estimateLength(strs []string) int {
 	total := 0
 	for _, s := range strs {
@@ -64,7 +50,7 @@ type SafeCounter struct {
 	count int64
 }
 
-// NewSafeCounter 创建一个新的 SafeCounter 实例
+// NewSafeCounter 创建一个 SafeCounter 实例
 func NewSafeCounter() *SafeCounter {
 	return &SafeCounter{}
 }
@@ -77,9 +63,6 @@ func (sc *SafeCounter) Increment() {
 }
 
 // Value 获取当前计数器的值
-// 返回值:
-//
-//	int64: 当前计数
 func (sc *SafeCounter) Value() int64 {
 	sc.mu.Lock()
 	defer sc.mu.Unlock()

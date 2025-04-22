@@ -5,20 +5,12 @@ package sliceutils
 // SliceUtils 包含切片相关的工具方法
 type SliceUtils struct{}
 
-// NewSliceUtils 创建一个新的 SliceUtils 实例
+// NewSliceUtils 创建一个 SliceUtils 实例
 func NewSliceUtils() *SliceUtils {
 	return &SliceUtils{}
 }
 
 // Remove 从字符串切片中删除指定索引的元素
-// 参数:
-//
-//	slice []string: 输入切片
-//	i int: 要删除的元素索引
-//
-// 返回值:
-//
-//	[]string: 删除元素后的切片
 func (su *SliceUtils) Remove(slice []string, i int) []string {
 	if i < 0 || i >= len(slice) {
 		return slice
@@ -27,13 +19,6 @@ func (su *SliceUtils) Remove(slice []string, i int) []string {
 }
 
 // Deduplicate 移除字符串切片中的重复元素
-// 参数:
-//
-//	slice []string: 输入切片
-//
-// 返回值:
-//
-//	[]string: 去重后的切片
 func (su *SliceUtils) Deduplicate(slice []string) []string {
 	seen := make(map[string]struct{}, len(slice))
 	result := make([]string, 0, len(slice))
@@ -47,14 +32,6 @@ func (su *SliceUtils) Deduplicate(slice []string) []string {
 }
 
 // Filter 根据谓词函数过滤切片元素
-// 参数:
-//
-//	slice []string: 输入切片
-//	predicate func(string) bool: 过滤条件
-//
-// 返回值:
-//
-//	[]string: 过滤后的切片
 func (su *SliceUtils) Filter(slice []string, predicate func(string) bool) []string {
 	result := make([]string, 0, len(slice))
 	for _, item := range slice {
@@ -66,14 +43,6 @@ func (su *SliceUtils) Filter(slice []string, predicate func(string) bool) []stri
 }
 
 // Map 对切片中的每个元素应用转换函数
-// 参数:
-//
-//	slice []string: 输入切片
-//	transform func(string) string: 转换函数
-//
-// 返回值:
-//
-//	[]string: 转换后的切片
 func (su *SliceUtils) Map(slice []string, transform func(string) string) []string {
 	result := make([]string, len(slice))
 	for i, item := range slice {
@@ -83,13 +52,6 @@ func (su *SliceUtils) Map(slice []string, transform func(string) string) []strin
 }
 
 // Reverse 反转字符串切片
-// 参数:
-//
-//	slice []string: 输入切片
-//
-// 返回值:
-//
-//	[]string: 反转后的切片
 func (su *SliceUtils) Reverse(slice []string) []string {
 	result := make([]string, len(slice))
 	for i := 0; i < len(slice); i++ {

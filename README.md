@@ -2,9 +2,7 @@
 
 ## 简介 (Introduction)
 
-**GoUtils** 是一个高性能、模块化的 Go 语言工具包，旨在提供常用的字符串、切片、并发和通用工具方法。它注重性能优化，使用如 `strings.Builder`、`sync.Pool` 和 `unsafe` 等技术，适合需要高效处理数据的场景。工具包按功能模块化设计，易于扩展和维护，包含全面的单元测试。
-
-**GoUtils** is a high-performance, modular Go utility library designed to provide common tools for string manipulation, slice operations, concurrent utilities, and general-purpose functions. It focuses on performance optimization with techniques like `strings.Builder`, `sync.Pool`, and `unsafe` operations, making it suitable for scenarios requiring efficient data processing. The library is modular, easy to extend, and includes comprehensive unit tests.
+**GoUtils** 是一个高性能、模块化的 Go 语言工具包，旨在提供常用的字符串、切片、并发和通用工具方法。它注重性能优化，使用如 `strings.Builder`、`sync.Pool` 和 `unsafe` 等技术，适合需要高效处理数据的场景。工具包按功能模块化设计，易于扩展和维护，包含单元测试。
 
 ## 功能 (Features)
 

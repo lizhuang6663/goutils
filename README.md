@@ -181,4 +181,4 @@ go test ./...
 
 ## 联系 (Contact)
 
-如有问题或建议，请在 GitHub Issues 中提出，或联系：your.email@example.com。
+如有问题或建议，请在 GitHub Issues 中提出，或联系：3174285493@qq.com。

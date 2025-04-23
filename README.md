@@ -40,15 +40,15 @@
 2. 使用 `go get` 安装工具包：
 
 ```bash
-go get github.com/yourusername/goutils
+go get github.com/lizhuang6663/goutils
 ```
 
 3. 在代码中导入所需包：
 
 ```go
 import (
-    "github.com/yourusername/goutils/stringutils"
-    "github.com/yourusername/goutils/sliceutils"
+    "github.com/lizhuang6663/goutils/stringutils"
+    "github.com/lizhuang6663/goutils/sliceutils"
     // 其他包
 )
 ```
@@ -64,7 +64,7 @@ package main
 
 import (
     "fmt"
-    "github.com/yourusername/goutils/stringutils"
+    "github.com/lizhuang6663/goutils/stringutils"
 )
 
 func main() {
@@ -81,7 +81,7 @@ package main
 
 import (
     "fmt"
-    "github.com/yourusername/goutils/sliceutils"
+    "github.com/lizhuang6663/goutils/sliceutils"
 )
 
 func main() {
@@ -100,7 +100,7 @@ package main
 import (
     "fmt"
     "sync"
-    "github.com/yourusername/goutils/concurrentutils"
+    "github.com/lizhuang6663/goutils/concurrentutils"
 )
 
 func main() {
@@ -125,7 +125,7 @@ package main
 
 import (
     "fmt"
-    "github.com/yourusername/goutils/commonutils"
+    "github.com/lizhuang6663/goutils/commonutils"
 )
 
 func main() {
@@ -160,7 +160,7 @@ goutils/
 1. 克隆仓库：
 
 ```bash
-git clone https://github.com/yourusername/goutils.git
+git clone https://github.com/lizhuang6663/goutils.git
 ```
 
 2. 运行测试：
